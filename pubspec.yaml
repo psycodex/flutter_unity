@@ -14,10 +14,27 @@ dependencies:
     sdk: flutter
   flutter_unity_widget: ^2022.1.7+1
   pointer_interceptor: ^0.9.3+2
+  get_it: ^7.2.0
+  # For state management
+  bloc: ^8.0.1
+  # Allows value based equality for our classes e.g Eat() == Eat() is true
+  equatable: ^2.0.3
+  # Generates code for us by providing annotations we can use
+  injectable: ^1.5.3
+  # Allows converting json to dart class and back
+  json_annotation: ^4.4.0
+  # Allows easier routing
+  auto_route: ^3.2.0
+  # Required to work with firebase.
+  firebase_core: ^1.11.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  # add the generator to your dev_dependencies
+  injectable_generator:
+  # add build runner if not already added
+  build_runner:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
