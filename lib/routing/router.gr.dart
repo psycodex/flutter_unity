@@ -14,7 +14,7 @@
 import 'package:auto_route/auto_route.dart' as _i2;
 import 'package:flutter/material.dart' as _i3;
 
-import '../tab_container_default.dart' as _i1;
+import '../home.dart' as _i1;
 
 class AppRouter extends _i2.RootStackRouter {
   AppRouter([_i3.GlobalKey<_i3.NavigatorState>? navigatorKey])
@@ -24,7 +24,7 @@ class AppRouter extends _i2.RootStackRouter {
   final Map<String, _i2.PageFactory> pagesMap = {
     TabContainerDefault.name: (routeData) {
       return _i2.MaterialPageX<dynamic>(
-          routeData: routeData, child: _i1.TabContainerDefault());
+          routeData: routeData, child: _i1.HomeContainer());
     }
   };
 
@@ -34,7 +34,7 @@ class AppRouter extends _i2.RootStackRouter {
 }
 
 /// generated route for
-/// [_i1.TabContainerDefault]
+/// [_i1.HomeContainer]
 class TabContainerDefault extends _i2.PageRouteInfo<void> {
   const TabContainerDefault() : super(TabContainerDefault.name, path: '/');
 

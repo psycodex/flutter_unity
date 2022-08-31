@@ -3,14 +3,14 @@ import 'package:flutter_unity_widget_example/services/unity.service.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
 import 'package:flutter_unity_widget_example/injection.dart';
 
-class UnitySimpleScreen extends StatefulWidget {
+class ExerciseScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return new _UnitySimpleScreenState();
+    return new _ExerciseScreenState();
   }
 }
 
-class _UnitySimpleScreenState extends State<UnitySimpleScreen> {
+class _ExerciseScreenState extends State<ExerciseScreen> {
   final UnityService unityService = locator<UnityService>();
 
   double _sliderValue = 0.0;
@@ -20,7 +20,7 @@ class _UnitySimpleScreenState extends State<UnitySimpleScreen> {
     return Scaffold(
       // key: _scaffoldKey,
       appBar: AppBar(
-        title: Text('Simple Screen'),
+        title: Text('Exercise'),
       ),
       body: Card(
           margin: const EdgeInsets.all(0),
