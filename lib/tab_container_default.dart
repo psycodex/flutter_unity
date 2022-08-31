@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_unity_widget_example/screens_unity/unity_simple_screen.dart';
 
 class TabContainerDefault extends StatefulWidget {
-  State<StatefulWidget> statefulWidget;
+  late State<StatefulWidget> statefulWidget;
 
   @override
   State<StatefulWidget> createState() {
@@ -12,7 +12,7 @@ class TabContainerDefault extends StatefulWidget {
 }
 
 class _TabContainerDefaultState extends State<TabContainerDefault> {
-  List<UnitySimpleScreen> listScreens;
+  late List<UnitySimpleScreen> listScreens;
 
   @override
   void initState() {

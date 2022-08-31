@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_unity_widget_example/routing/router.gr.dart';
 import 'package:flutter_unity_widget_example/services/unity.service.dart';
 import 'package:injectable/injectable.dart';
 
@@ -20,8 +21,8 @@ abstract class AppModule {
   // @injectable
   // FirebaseAuth get auth => FirebaseAuth.instance;
 
-  // @injectable
-  // AppRouter get appRouter => AppRouter();
+  @injectable
+  AppRouter get appRouter => AppRouter();
 
   @preResolve
   Future<NotificationService> get notificationService async =>

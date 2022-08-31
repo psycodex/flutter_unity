@@ -52,7 +52,7 @@ class FirebaseService {
     );
     final token = await FirebaseService._messaging.getToken();
     print("token ==> $token");
-    FirebaseService.token = token;
+    FirebaseService.token = token!;
 
     FirebaseMessaging.onMessage.listen((message) {
       print('Got a message whilst in the foreground!');

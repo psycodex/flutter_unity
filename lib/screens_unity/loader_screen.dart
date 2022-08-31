@@ -3,14 +3,14 @@ import 'package:flutter_unity_widget/flutter_unity_widget.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
 
 class LoaderScreen extends StatefulWidget {
-  LoaderScreen({Key key}) : super(key: key);
+  LoaderScreen({required Key key}) : super(key: key);
 
   @override
   _LoaderScreenState createState() => _LoaderScreenState();
 }
 
 class _LoaderScreenState extends State<LoaderScreen> {
-  UnityWidgetController _unityWidgetController;
+  late UnityWidgetController _unityWidgetController;
   double _sliderValue = 0.0;
 
   @override
