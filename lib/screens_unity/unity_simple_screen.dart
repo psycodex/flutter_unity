@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_unity_widget/flutter_unity_widget.dart';
+import 'package:flutter_unity_widget_example/services/unity.service.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
+import 'package:flutter_unity_widget_example/injection.dart';
 
 class UnitySimpleScreen extends StatefulWidget {
-  final UnityWidget unityWidget;
-  UnityWidgetController unityWidgetController;
-  UnityCreatedCallback createdCallback;
-
-  UnitySimpleScreen({this.unityWidget, this.createdCallback});
-
   @override
   State<StatefulWidget> createState() {
     return new _UnitySimpleScreenState();
@@ -16,14 +12,15 @@ class UnitySimpleScreen extends StatefulWidget {
 }
 
 class _UnitySimpleScreenState extends State<UnitySimpleScreen> {
-  static final GlobalKey<ScaffoldState> _scaffoldKey =
-      GlobalKey<ScaffoldState>();
+  final UnityService unityService = locator<UnityService>();
+
+  // static final GlobalKey<ScaffoldState> _scaffoldKey =
+  //     GlobalKey<ScaffoldState>();
 
   double _sliderValue = 0.0;
 
   @override
   void initState() {
-    widget.createdCallback = _onUnityCreated;
     // widget.unit
     super.initState();
   }
@@ -35,13 +32,13 @@ class _UnitySimpleScreenState extends State<UnitySimpleScreen> {
   }
 
   void _onUnityCreated(controller) {
-    widget.unityWidgetController = controller;
+    unityService.unityWidgetController = controller;
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: _scaffoldKey,
+      // key: _scaffoldKey,
       appBar: AppBar(
         title: Text('Simple Screen'),
       ),
@@ -53,7 +50,7 @@ class _UnitySimpleScreenState extends State<UnitySimpleScreen> {
           ),
           child: Stack(
             children: [
-              widget.unityWidget,
+              unityService.unityWidget,
               PointerInterceptor(
                 child: Positioned(
                   bottom: 0,
@@ -89,7 +86,7 @@ class _UnitySimpleScreenState extends State<UnitySimpleScreen> {
   }
 
   void setRotationSpeed(String speed) {
-    widget.unityWidgetController.postMessage(
+    unityService.unityWidgetController.postMessage(
       'Cube',
       'SetRotationSpeed',
       speed,

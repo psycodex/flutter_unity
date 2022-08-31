@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_unity_widget/flutter_unity_widget.dart';
-import 'package:flutter_unity_widget_example/screens/unity_simple_screen.dart';
+import 'package:flutter_unity_widget_example/screens_unity/unity_simple_screen.dart';
 
 class TabContainerDefault extends StatefulWidget {
-  final UnityWidget unityWidget;
-  UnityWidgetController unityWidgetController;
   State<StatefulWidget> statefulWidget;
-  UnityCreatedCallback createdCallback;
-
-  TabContainerDefault({this.unityWidget, this.createdCallback});
 
   @override
   State<StatefulWidget> createState() {
@@ -25,15 +19,9 @@ class _TabContainerDefaultState extends State<TabContainerDefault> {
     super.initState();
 
     listScreens = [
-      UnitySimpleScreen(
-          unityWidget: widget.unityWidget,
-          createdCallback: widget.createdCallback),
-      UnitySimpleScreen(
-          unityWidget: widget.unityWidget,
-          createdCallback: widget.createdCallback),
-      UnitySimpleScreen(
-          unityWidget: widget.unityWidget,
-          createdCallback: widget.createdCallback),
+      UnitySimpleScreen(),
+      UnitySimpleScreen(),
+      UnitySimpleScreen(),
     ];
   }
 

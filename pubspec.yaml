@@ -27,6 +27,10 @@ dependencies:
   auto_route: ^3.2.0
   # Required to work with firebase.
   firebase_core: ^1.11.0
+  awesome_notifications: ^0.6.21
+  firebase_auth: ^3.3.5
+  cloud_firestore: ^3.1.6
+  firebase_messaging: ^11.2.5
 
 dev_dependencies:
   flutter_test:
@@ -34,7 +38,7 @@ dev_dependencies:
   # add the generator to your dev_dependencies
   injectable_generator:
   # add build runner if not already added
-  build_runner:
+  build_runner: 2.2.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
