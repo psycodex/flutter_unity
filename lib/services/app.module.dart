@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_unity_widget_example/routing/router.gr.dart';
-import 'package:flutter_unity_widget_example/services/unity.service.dart';
+import 'package:psyc_fit/routing/router.gr.dart';
+import 'package:psyc_fit/services/unity.service.dart';
 import 'package:injectable/injectable.dart';
 
 import 'firebase.service.dart';

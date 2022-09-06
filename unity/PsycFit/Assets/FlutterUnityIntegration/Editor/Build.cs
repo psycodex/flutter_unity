@@ -359,6 +359,9 @@ body { padding: 0; margin: 0; overflow: hidden; }
             buildText = buildText.Replace(
                 "commandLineArgs.add(\"--profiler-output-file=\" + workingDir + \"/build/il2cpp_\"+ abi + \"_\" + configuration + \"/il2cpp_conv.traceevents\")",
                 "");
+            buildText = buildText.Replace(
+                "commandLineArgs.add(\"--cachedirectory=\" + workingDir + \"/build/il2cpp_\"+ abi + \"_\" + configuration + \"/il2cpp_cache\")",
+                "commandLineArgs.add(\"--cachedirectory=\" + workingDir + \"../../build/il2cpp_\"+ abi + \"_\" + configuration + \"/il2cpp_cache\")");
 
             buildText = Regex.Replace(buildText, @"\n.*applicationId '.+'.*\n", "");
             File.WriteAllText(buildFile, buildText);
@@ -441,13 +444,7 @@ body { padding: 0; margin: 0; overflow: hidden; }
         private static void Copy(string source, string destinationPath)
         {
             if (Directory.Exists(destinationPath))
-            {
-                if (Directory.Exists(destinationPath + "/build"))
-                {
-                    Directory.Move(destinationPath + "/build", destinationPath + "/../build");
-                }
                 Directory.Delete(destinationPath, true);
-            }
 
             Directory.CreateDirectory(destinationPath);
 
@@ -458,11 +455,6 @@ body { padding: 0; margin: 0; overflow: hidden; }
             foreach (var newPath in Directory.GetFiles(source, "*.*",
                          SearchOption.AllDirectories))
                 File.Copy(newPath, newPath.Replace(source, destinationPath), true);
-            
-            if (Directory.Exists(destinationPath + "/../build"))
-            {
-                Directory.Move(destinationPath + "/../build", destinationPath + "/build");
-            }
         }
 
         private static string[] GetEnabledScenes()

@@ -1,4 +1,4 @@
-# flutter_unity_widget_example
+# psyc_fit
 
 Demonstrates how to use the flutter_unity_widget plugin.
 

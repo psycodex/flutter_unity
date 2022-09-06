@@ -18,7 +18,7 @@ class UnityService {
       onUnityMessage: onUnityMessage,
       onUnitySceneLoaded: onUnitySceneLoaded,
       useAndroidViewSurface: true,
-      borderRadius: BorderRadius.all(Radius.circular(70)),
+      // borderRadius: BorderRadius.all(Radius.circular(70)),
     );
   }
 

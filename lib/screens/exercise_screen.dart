@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_unity_widget_example/services/unity.service.dart';
+import 'package:psyc_fit/services/unity.service.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
-import 'package:flutter_unity_widget_example/injection.dart';
+import 'package:psyc_fit/injection.dart';
 
 class ExerciseScreen extends StatefulWidget {
   @override
@@ -30,36 +30,38 @@ class _ExerciseScreenState extends State<ExerciseScreen> {
           ),
           child: Stack(
             children: [
-              unityService.unityWidget,
-              PointerInterceptor(
-                child: Positioned(
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  child: Card(
-                    elevation: 10,
-                    child: Column(
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.only(top: 20),
-                          child: Text("Rotation speed:"),
-                        ),
-                        Slider(
-                          onChanged: (value) {
-                            setState(() {
-                              _sliderValue = value;
-                            });
-                            setRotationSpeed(value.toString());
-                          },
-                          value: _sliderValue,
-                          min: 0.0,
-                          max: 1.0,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              Container(
+                  constraints: BoxConstraints(maxHeight: 300),
+                  child: unityService.unityWidget),
+              // PointerInterceptor(
+              //   child: Positioned(
+              //     bottom: 0,
+              //     left: 0,
+              //     right: 0,
+              //     child: Card(
+              //       elevation: 10,
+              //       child: Column(
+              //         children: <Widget>[
+              //           Padding(
+              //             padding: const EdgeInsets.only(top: 20),
+              //             child: Text("Rotation speed:"),
+              //           ),
+              //           Slider(
+              //             onChanged: (value) {
+              //               setState(() {
+              //                 _sliderValue = value;
+              //               });
+              //               setRotationSpeed(value.toString());
+              //             },
+              //             value: _sliderValue,
+              //             min: 0.0,
+              //             max: 1.0,
+              //           ),
+              //         ],
+              //       ),
+              //     ),
+              //   ),
+              // ),
             ],
           )),
     );

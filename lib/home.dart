@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_unity_widget_example/screens/exercise_screen.dart';
-import 'package:flutter_unity_widget_example/screens/profile_screen.dart';
-import 'package:flutter_unity_widget_example/screens/progress_screen.dart';
-import 'package:flutter_unity_widget_example/screens/workout_screen.dart';
+import 'package:psyc_fit/screens/exercise_screen.dart';
+import 'package:psyc_fit/screens/profile_screen.dart';
+import 'package:psyc_fit/screens/progress_screen.dart';
+import 'package:psyc_fit/screens/workout_screen.dart';
 
 class HomeContainer extends StatefulWidget {
   @override

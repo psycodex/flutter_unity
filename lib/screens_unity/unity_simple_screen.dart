@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_unity_widget_example/services/unity.service.dart';
+import 'package:psyc_fit/services/unity.service.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
-import 'package:flutter_unity_widget_example/injection.dart';
+import 'package:psyc_fit/injection.dart';
 
 class UnitySimpleScreen extends StatefulWidget {
   @override
