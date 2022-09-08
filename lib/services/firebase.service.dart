@@ -1,6 +1,10 @@
 import 'package:awesome_notifications/awesome_notifications.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:psyc_fit/firebase_options.dart';
 
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   // If you're going to use other Firebase services in the background, such as Firestore,
@@ -37,10 +41,12 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 class FirebaseService {
   // We use a static function because we won't be able to receive access it in a static method
   static FirebaseMessaging _messaging = FirebaseMessaging.instance;
+
   static String token = "";
 
   static Future<FirebaseService> init() async {
-    await Firebase.initializeApp();
+    await Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform);
     await FirebaseService._messaging.requestPermission(
       alert: true,
       announcement: false,

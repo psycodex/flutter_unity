@@ -1,4 +1,4 @@
-package com.psycodex.psyc_fit;
+package com.psycodex.psycfit;
 
 import io.flutter.embedding.android.FlutterActivity
 

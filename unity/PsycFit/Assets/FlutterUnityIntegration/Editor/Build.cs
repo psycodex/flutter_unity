@@ -361,7 +361,7 @@ body { padding: 0; margin: 0; overflow: hidden; }
                 "");
             buildText = buildText.Replace(
                 "commandLineArgs.add(\"--cachedirectory=\" + workingDir + \"/build/il2cpp_\"+ abi + \"_\" + configuration + \"/il2cpp_cache\")",
-                "commandLineArgs.add(\"--cachedirectory=\" + workingDir + \"../../build/il2cpp_\"+ abi + \"_\" + configuration + \"/il2cpp_cache\")");
+                "commandLineArgs.add(\"--cachedirectory=\" + workingDir + \"/../../build/il2cpp_\"+ abi + \"_\" + configuration + \"/il2cpp_cache\")");
 
             buildText = Regex.Replace(buildText, @"\n.*applicationId '.+'.*\n", "");
             File.WriteAllText(buildFile, buildText);

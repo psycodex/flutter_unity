@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "150015187293",
+    "project_id": "psyc-fit",
+    "storage_bucket": "psyc-fit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:150015187293:android:63211b82cc090f155bb0b4",
+        "android_client_info": {
+          "package_name": "com.psycodex.psycfit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "150015187293-gp8qbofnfpccjr7d0lcdp3ukccki8fjq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyHPj3F_lZbx3qJoGl1JYOf5O6AUqj4UM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "150015187293-gp8qbofnfpccjr7d0lcdp3ukccki8fjq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "150015187293-0cqs5gc20j8gg4befij8dhor59cgdsn2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.xraph.plugin.fuwPluginExample"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

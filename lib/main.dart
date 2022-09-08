@@ -6,7 +6,6 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await configureDependencies();
   runApp(MyApp());
-  // runApp(TabBarDemo());
 }
 
 class MyApp extends StatelessWidget {
