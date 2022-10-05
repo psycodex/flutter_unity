@@ -47,29 +47,30 @@ class FirebaseService {
   static Future<FirebaseService> init() async {
     await Firebase.initializeApp(
         options: DefaultFirebaseOptions.currentPlatform);
-    await FirebaseService._messaging.requestPermission(
-      alert: true,
-      announcement: false,
-      badge: true,
-      carPlay: false,
-      criticalAlert: false,
-      provisional: false,
-      sound: true,
-    );
-    final token = await FirebaseService._messaging.getToken();
-    print("token ==> $token");
-    FirebaseService.token = token!;
 
-    FirebaseMessaging.onMessage.listen((message) {
-      print('Got a message whilst in the foreground!');
-      print('Message data: ${message.data}');
-
-      if (message.notification != null) {
-        print('Message also contained a notification: ${message.notification}');
-      }
-    });
-
-    FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+    // await FirebaseService._messaging.requestPermission(
+    //   alert: true,
+    //   announcement: false,
+    //   badge: true,
+    //   carPlay: false,
+    //   criticalAlert: false,
+    //   provisional: false,
+    //   sound: true,
+    // );
+    // final token = await FirebaseService._messaging.getToken();
+    // print("token ==> $token");
+    // FirebaseService.token = token!;
+    //
+    // FirebaseMessaging.onMessage.listen((message) {
+    //   print('Got a message whilst in the foreground!');
+    //   print('Message data: ${message.data}');
+    //
+    //   if (message.notification != null) {
+    //     print('Message also contained a notification: ${message.notification}');
+    //   }
+    // });
+    //
+    // FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
     return FirebaseService();
   }
 }
