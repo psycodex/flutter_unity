@@ -1,14 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:psyc_fit/objectbox.g.dart';
 import 'package:psyc_fit/routing/router.gr.dart';
 import 'package:psyc_fit/services/unity.service.dart';
 import 'package:injectable/injectable.dart';
 
 import 'firebase.service.dart';
-import 'notification.service.dart';
 
 @module
 abstract class AppModule {
@@ -32,6 +31,9 @@ abstract class AppModule {
 
   @injectable
   AppRouter get appRouter => AppRouter();
+
+  @preResolve
+  Future<Store> get objectBox async => await openStore();
 
 // @preResolve
 // Future<NotificationService> get notificationService async =>
