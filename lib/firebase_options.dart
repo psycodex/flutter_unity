@@ -67,6 +67,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '150015187293',
     projectId: 'psyc-fit',
     storageBucket: 'psyc-fit.appspot.com',
+    androidClientId: '150015187293-4m34l8sjmvlamlgth8a36p6f6iulnm38.apps.googleusercontent.com',
     iosClientId: '150015187293-3c3mrtqbl8f963c4v89j7ajm258vn7fs.apps.googleusercontent.com',
     iosBundleId: 'com.psycodex.psycfit',
   );
@@ -77,6 +78,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '150015187293',
     projectId: 'psyc-fit',
     storageBucket: 'psyc-fit.appspot.com',
+    androidClientId: '150015187293-4m34l8sjmvlamlgth8a36p6f6iulnm38.apps.googleusercontent.com',
     iosClientId: '150015187293-fsi28kvnr2045k4b36kgvpmn8gidb8tn.apps.googleusercontent.com',
     iosBundleId: 'com.psycodex.psyfit',
   );

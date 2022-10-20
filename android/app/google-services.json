@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "150015187293-p66906ru1mb16oeei7o893icq6mt42fc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.psycodex.psycfit",
+            "certificate_hash": "88b66a539b884245ee924fee08bf554bf29bbc6d"
+          }
+        },
+        {
           "client_id": "150015187293-gp8qbofnfpccjr7d0lcdp3ukccki8fjq.apps.googleusercontent.com",
           "client_type": 3
         }

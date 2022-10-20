@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:psyc_fit/objectbox.g.dart';
 import 'package:psyc_fit/routing/router.gr.dart';
-import 'package:psyc_fit/services/unity.service.dart';
+// import 'package:psyc_fit/services/unity.service.dart';
 import 'package:injectable/injectable.dart';
 
 import 'firebase.service.dart';
@@ -14,8 +14,8 @@ abstract class AppModule {
   @preResolve
   Future<FirebaseService> get fireService => FirebaseService.init();
 
-  @preResolve
-  Future<UnityService> get unityService => UnityService.init();
+  // @preResolve
+  // Future<UnityService> get unityService => UnityService.init();
 
   @injectable
   FirebaseFirestore get store => FirebaseFirestore.instance;

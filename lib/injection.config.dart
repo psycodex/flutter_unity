@@ -14,10 +14,9 @@ import 'package:injectable/injectable.dart' as _i2;
 
 import 'objectbox.g.dart' as _i9;
 import 'routing/router.gr.dart' as _i3;
-import 'services/app.module.dart' as _i11;
-import 'services/firebase.service.dart' as _i8;
-import 'services/unity.service.dart'
-    as _i10; // ignore_for_file: unnecessary_lambdas
+import 'services/app.module.dart' as _i10;
+import 'services/firebase.service.dart'
+    as _i8; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -45,11 +44,7 @@ Future<_i1.GetIt> $initGetIt(
     () => appModule.objectBox,
     preResolve: true,
   );
-  await gh.factoryAsync<_i10.UnityService>(
-    () => appModule.unityService,
-    preResolve: true,
-  );
   return get;
 }
 
-class _$AppModule extends _i11.AppModule {}
+class _$AppModule extends _i10.AppModule {}

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:psyc_fit/services/unity.service.dart';
-import 'package:pointer_interceptor/pointer_interceptor.dart';
 import 'package:psyc_fit/injection.dart';
 
 class ExerciseScreen extends StatefulWidget {
@@ -11,7 +10,7 @@ class ExerciseScreen extends StatefulWidget {
 }
 
 class _ExerciseScreenState extends State<ExerciseScreen> {
-  final UnityService unityService = locator<UnityService>();
+  // final UnityService unityService = locator<UnityService>();
 
   double _sliderValue = 0.0;
 
@@ -32,46 +31,9 @@ class _ExerciseScreenState extends State<ExerciseScreen> {
             children: [
               Container(
                   constraints: BoxConstraints(maxHeight: 300),
-                  child: unityService.unityWidget),
-              // PointerInterceptor(
-              //   child: Positioned(
-              //     bottom: 0,
-              //     left: 0,
-              //     right: 0,
-              //     child: Card(
-              //       elevation: 10,
-              //       child: Column(
-              //         children: <Widget>[
-              //           Padding(
-              //             padding: const EdgeInsets.only(top: 20),
-              //             child: Text("Rotation speed:"),
-              //           ),
-              //           Slider(
-              //             onChanged: (value) {
-              //               setState(() {
-              //                 _sliderValue = value;
-              //               });
-              //               setRotationSpeed(value.toString());
-              //             },
-              //             value: _sliderValue,
-              //             min: 0.0,
-              //             max: 1.0,
-              //           ),
-              //         ],
-              //       ),
-              //     ),
-              //   ),
-              // ),
+                  child: Container()),
             ],
           )),
-    );
-  }
-
-  void setRotationSpeed(String speed) {
-    unityService.unityWidgetController.postMessage(
-      'Cube',
-      'SetRotationSpeed',
-      speed,
     );
   }
 }

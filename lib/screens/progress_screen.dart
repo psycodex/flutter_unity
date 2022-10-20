@@ -28,48 +28,7 @@ class _ProgressScreenState extends State<ProgressScreen> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20.0),
           ),
-          child: Stack(
-            children: [
-              unityService.unityWidget,
-              PointerInterceptor(
-                child: Positioned(
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  child: Card(
-                    elevation: 10,
-                    child: Column(
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.only(top: 20),
-                          child: Text("Rotation speed:"),
-                        ),
-                        Slider(
-                          onChanged: (value) {
-                            setState(() {
-                              _sliderValue = value;
-                            });
-                            setRotationSpeed(value.toString());
-                          },
-                          value: _sliderValue,
-                          min: 0.0,
-                          max: 1.0,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          )),
-    );
-  }
-
-  void setRotationSpeed(String speed) {
-    unityService.unityWidgetController.postMessage(
-      'Cube',
-      'SetRotationSpeed',
-      speed,
+          child: Stack()),
     );
   }
 }
