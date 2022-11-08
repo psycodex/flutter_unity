@@ -43,11 +43,15 @@ class FirebaseService {
   static FirebaseMessaging _messaging = FirebaseMessaging.instance;
 
   static String token = "";
+  static bool shouldUseFirebaseEmulator = false;
 
   static Future<FirebaseService> init() async {
     await Firebase.initializeApp(
         options: DefaultFirebaseOptions.currentPlatform);
 
+    if (shouldUseFirebaseEmulator) {
+      await FirebaseAuth.instance.useAuthEmulator('localhost', 9099);
+    }
     // await FirebaseService._messaging.requestPermission(
     //   alert: true,
     //   announcement: false,

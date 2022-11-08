@@ -4,14 +4,14 @@ import 'package:psyc_fit/screens/profile_screen.dart';
 import 'package:psyc_fit/screens/progress_screen.dart';
 import 'package:psyc_fit/screens/workout_screen.dart';
 
-class HomeContainer extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _HomeContainerState();
+    return _HomeScreenState();
   }
 }
 
-class _HomeContainerState extends State<HomeContainer> {
+class _HomeScreenState extends State<HomeScreen> {
   late var listScreens;
 
   @override
